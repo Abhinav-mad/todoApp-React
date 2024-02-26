@@ -4,7 +4,7 @@ import { Container, Navbar } from 'react-bootstrap'
 function Header() {
   return (
     <div>
-         <Navbar className="bg-light shadow ">
+         <Navbar className="bg-light border border-2 shadow ">
          <Container>
           <Navbar.Brand href="#home">
           <i class="fa-solid fa-list-check fa-bounce m-2"></i>

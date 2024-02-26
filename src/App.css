@@ -9,8 +9,14 @@
 body {
   background-color: rgba(231, 230, 230, 0.849);
 }
+
+
+
+
 .todo-app {
   display: flex;
+
+  
   flex-direction: column;
   justify-content: start;
   width: 520px;
@@ -40,7 +46,7 @@ h1 {
 .todo-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
+  border: 2px solid #c5c2cc;
   outline: none;
   width: 320px;
   background: transparent;
@@ -59,8 +65,8 @@ h1 {
   outline: none;
   background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgb(125, 124, 128) 0%,
+    rgb(209, 163, 237) 100%
   );
   color: #fff;
   text-transform: capitalize;
@@ -94,7 +100,7 @@ h1 {
   background: linear-gradient(
     90deg,
     rgba(255, 118, 20, 1) 0%,
-    rgba(255, 84, 17, 1) 100%
+    rgb(111, 33, 2) 100%
   );
 
   padding: 16px;
@@ -105,8 +111,8 @@ h1 {
 .todo-row:nth-child(4n + 1) {
   background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgb(12, 255, 12) 0%,
+    rgb(0, 109, 2) 100%
   );
 }
 
@@ -114,7 +120,7 @@ h1 {
   background: linear-gradient(
     90deg,
     rgba(255, 12, 241, 1) 0%,
-    rgba(250, 0, 135, 1) 100%
+    rgb(114, 0, 61) 100%
   );
 }
 
@@ -122,7 +128,7 @@ h1 {
   background: linear-gradient(
     90deg,
     rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
+    rgb(1, 45, 103) 100%
   );
 }
 

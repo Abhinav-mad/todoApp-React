@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
+import { Col, Row } from 'react-bootstrap';
+import TrackVisibility from 'react-on-screen';
+import 'animate.css'
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -42,14 +45,36 @@ function TodoList() {
 
   return (
     <>
-      <h1>What's the Plan for Today?</h1>
-      <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
+      <div >
+        <Row className='mt-5'>
+          <Col md={3}></Col>
+
+          <Col md={6} className='d-flex  flex-column border border-2 shadow bg-dark rounded p-2'>
+            <div className="mb-4">
+              <h1 className='mb-2 text-light fw-bolder'>What's the Plan for Today?</h1>
+
+            </div>
+            <TodoForm onSubmit={addTodo} />
+            <TrackVisibility>
+      {({ isVisible }) =>
+
+
+
+            <Todo className={isVisible ? "animate__animated animate__backInUp" : ""}
+              todos={todos}
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+              updateTodo={updateTodo}
+            />
+
+      }
+      </TrackVisibility>
+          </Col>
+
+          <Col md={3}></Col>
+
+        </Row>
+      </div>
     </>
   );
 }
